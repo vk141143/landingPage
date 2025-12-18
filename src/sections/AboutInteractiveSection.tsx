@@ -250,7 +250,7 @@ export default function AboutInteractiveSection() {
   useEffect(() => {
     autoPlayRef.current = setInterval(() => {
       setCurrentStage((prev) => (prev + 1) % 3);
-    }, 4500);
+    }, 4500) as unknown as number;
 
     return () => {
       if (autoPlayRef.current) clearInterval(autoPlayRef.current);
