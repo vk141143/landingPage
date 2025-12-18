@@ -1,0 +1,10 @@
+server {
+    listen {{ port }};
+    server_name _;
+    root /workspace/dist;
+    index index.html;
+
+    location / {
+        try_files $uri /index.html;
+    }
+}
